@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Finlandica:wght@500&family=Poppins:wght@500&display=swap');
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* common styles or utilities */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #e9e9e9;
+}
+.container{
+    background-color: #ffffff;
+    width: 870px;
+    padding: 30px;
+    margin-top: 21px;
+    border-radius: 5px;
+}
+hr{
+    border: 1px solid #dddddd;
+    margin-bottom: 27px;
+}
+/* top players style */
+.top-players{
+    margin-bottom: 30px;
+}
+.title{
+    color: #7c45d4;
+    font-size: 24px;
+    margin-top: 3px;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+}
+.player{
+    display: flex;
+    align-items: center;
+}
+.players img{
+    width: 56px;
+    height: 56px;
+}
+.name{
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+/*============
+top blog styles 
+==============*/
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+.blog img{
+    width: 165px;
+    height: 115px;
+}
+.blog{
+    display: flex;
+}
+.blog-info{
+    margin-left: 16px;
+}
+.blog-title{
+    font-size: 20px;
+}
+.blog-author{
+    color: #b1aeae;
+    font-size: 16px;
+}
+.blog-author a{
+    text-decoration: none;
+    color: #7c45d4;
+    font-size: 16px;
+}
+
+/* -----------------
+    Courses styles
+-------------------- */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course .banner img{
+    width: 224px;
+    height: 104px;
+}
+.course-title{
+    font-size: 20px;
+}
+.course-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course-duration{
+    background-color: #FFE4E8;
+    border-radius: 14.6913px;
+    font-size: 14.6913px;
+    color: #FF4A60;
+    width: 94.83px;
+    height: 29.38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-clock{
+    color: #FF4A60;
+    margin-right: 5.42px;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #ffae00;
+}
+.fa-star.empty{
+    color: #AEAEAE;
+}
+
+/*============= 
+  Media Quaries 
+===============*/
+
+/* mobile devices */
+@media only screen and (max-width: 688px){
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+}
+
+/* tablet devices */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .courses, .players{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
